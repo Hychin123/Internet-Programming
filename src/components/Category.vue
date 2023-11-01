@@ -1,7 +1,6 @@
 <template>
     <div class="item" :style="{
         backgroundColor: bgColor,
-        // color: color
     }">
         <div class="image">
             <img :src=Img alt="">
@@ -19,7 +18,6 @@
 <script>
 export default {
     name: "Category",
-    // props: ["Img", "Title", "Ttem", "bgColor"],
     props: {
         Img: String,
         Title: String,
