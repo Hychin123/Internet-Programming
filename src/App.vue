@@ -41,7 +41,6 @@ export default {
         {
           text: "Everyday Fresh & Clean with Our Products",
           img: new URL(Onion, import.meta.url).href,
-          // img: "https://s3-alpha-sig.figma.com/img/de8c/488a/87b9ce16acd7436a6dec758331c840bc?Expires=1699228800&Signature=Tpz2rQzeVvnBr9y2ieTzTBCjDCr-H5sSfMxsCQx0rs0IisW~gCJjfdRGfOHtJRt3xBUghQBrlnmRnmMhxlpBMg7j~NdKkQ7Y3kKgMYGkIORWZeuzappL3WKroT23gv9jInhkULvKQB9NpdYkfXgWoMcTymyEB8LvUij6lzDfCrIGhnnxyO2ZIFryVmrpU69PWGDgI6532jA9Ky15d7mvZZFcJ9jm36VvwiZcy9EoTeprsDc1ZxTEeEw4A6T2n51qT7nx4RplP1RNL3fi~NBj9jrvRx2Btm0P0kvVB1xmRyyTWrWscO8ibDneoBrieCoOQow3LlaITubTPbG2epaK3Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
           txtBtn: "Shop now",
           btnColor: "#3BB77E",
           bg: "#F3E8E8"
