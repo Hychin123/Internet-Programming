@@ -1,13 +1,11 @@
 <template>
     <div class="_promotion" :style="{
         backgroundColor: pro_bg,
-        // color: color
     }">
         <div class="_quote">
             <div class="_text">{{text}}</div>
         </div>
         <div class="_img">
-            <!-- <img src="https://image.similarpng.com/very-thumbnail/2020/10/Tiktok-logo-on-transparent-background-PNG.png" alt=""> -->
             <img :src=img
                 alt="">
         </div>
@@ -46,7 +44,6 @@ export default {
     height: 300px;
     position: relative;
     border-radius: 10px;
-    /* background: #F3E8E8; */
 }
 
 ._img {
