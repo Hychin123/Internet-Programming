@@ -11,7 +11,6 @@
 <script>
 
 export default {
-    name: "Button",
     props: ["text", "Bgcolor"],
     
 }
@@ -32,5 +31,6 @@ button {
     border-radius: 3px;
     /* background: var(--NestMart-Brand-1, #3BB77E); */
     box-shadow: 14px 14px 36px 0px rgba(85, 85, 85, 0.10);
+    cursor:pointer;
 }
 </style>

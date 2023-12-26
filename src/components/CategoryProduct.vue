@@ -10,7 +10,7 @@
             <div class="header">
                 {{ Name }}
             </div>
-            <div class="description">
+            <div class="description" @click="go( Id )">
                 {{ Description }}
             </div>
             <div class="sky">
@@ -71,8 +71,14 @@
             Down: String,
             Plus: String,
             currentState: Number,
-            tagStyle: String
+            tagStyle: String,
         },
+        methods:{
+            go(){
+                console.log(this.Id);
+                this.$router.push(`/products/${this.Id}`)
+            }
+        }
     }
 </script>
 
@@ -158,6 +164,7 @@
         width: 261px;
         height: 49px;
         flex-shrink: 0;
+        cursor:pointer;
     }
     .sky{
         display: inline-flex;
@@ -201,7 +208,7 @@
         height: 29px;
         flex-shrink: 0;
         border-radius: 4px;
-        background: #DEF9EC;
+        background: #dcd3a2;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -209,7 +216,8 @@
         
     }
     .a_1{
-        color: var(--NestMart-Brand-1, #3BB77E);        font-family: Quicksand;
+        color: var(--NestMart-Brand-1, #3BB77E);        
+        font-family: Quicksand;
         font-size: 20px;
         font-style: normal;
         font-weight: 700;

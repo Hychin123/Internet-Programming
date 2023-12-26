@@ -1,20 +1,30 @@
 <template>
-    <div class="_promotion" :style="{
-        backgroundColor: pro_bg,
-    }">
-        <div class="_quote">
-            <div class="_text">{{text}}</div>
-        </div>
-        <div class="_img">
-            <img :src=img
-                alt="">
-        </div>
-        <Button :text="textBtn" :Bgcolor="btn" class="_btn"></Button>
-    </div>
+    
+            <div class="_promotion" :style="{
+                backgroundColor: pro_bg,
+            }">
+                <div class="_quote">
+                    <div class="_text">{{text}}</div>
+                </div>
+                <div class="_img">
+                    <img :src=img
+                        alt="">
+                </div>
+                <!-- <div @click="goPromotion()" style="position: relative;bottom: -70%; left:10%">
+                    <button class="shopbtn">Shop now </button>
+                </div> -->
+                <div style="position: relative;bottom: -70%; left:10%">
+                    <RouterLink to="/products/2">
+                        <button class="shopbtn">Shop now </button>
+
+                    </RouterLink>
+                </div>
+                
+            </div>
 </template>
 
 <script>
-import Button from './Button.vue';
+import { RouterLink } from 'vue-router';
 export default {
     name: "Promotion",
     props: {
@@ -23,9 +33,15 @@ export default {
         textBtn: String,
         btn: String,
         pro_bg: String
+
     },
     components: {
-        Button,
+    RouterLink
+},
+    methods:{
+        goPromotion(){
+            this.$router.push(`/products/2`);
+        }
     }
 
 }
@@ -37,7 +53,18 @@ export default {
     padding: 0;
     box-sizing: border-box;
 }
-
+.shopbtn{
+    border: none;
+    padding: 8px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    border-radius: 3px;
+    background:#3BB77E;
+    box-shadow: 14px 14px 36px 0px rgba(85, 85, 85, 0.10);
+    cursor:pointer;
+}
 ._promotion {
     margin: 20px 20px 0 0;
     width: 512px;

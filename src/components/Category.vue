@@ -1,5 +1,6 @@
 <template>
-    <div class="item" :style="{backgroundColor: bgColor,}">
+    <div @click="goCategory( Id )" class="item" :style="{backgroundColor: bgColor,}" >
+        
         <div class="image">
             <img :src=Img alt="">
         </div>
@@ -17,10 +18,16 @@
 export default {
     name: "Category",
     props: {
+        Id:String,
         Img: String,
         Title: String,
         Item: String,
         bgColor: String
+    },
+    methods:{
+        goCategory(Id){
+            this.$router.push(`/categories/${Id}`);
+        }
     }
 
 }
