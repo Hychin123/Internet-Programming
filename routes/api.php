@@ -1,19 +1,20 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
+Route::get('getProducts', [ProductController::class, 'getProducts']);
+Route::post('createProduct', [ProductController::class, 'createProduct']);
+Route::get('findProduct/{productId}', [ProductController::class, 'getProduct']);
+Route::put('updateProduct/{productId}', [ProductController::class, 'updateProduct']);
+Route::delete('deleteProduct/{productId}', [ProductController::class, 'deleteProduct']);
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
+Route::get('getCategories', [CategoryController::class, 'getCategories']);
+Route::post('createCategory', [CategoryController::class, 'createCategory']);
+Route::get('getCategory/{categoryId}', [CategoryController::class, 'getCategory']);
+Route::put('updateCategory/{categoryId}', [CategoryController::class, 'updateCategory']);
+Route::delete('deleteCategory/{categoryId}', [CategoryController::class, 'deleteCategory']);
