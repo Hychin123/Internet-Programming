@@ -2,9 +2,10 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AuthController;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 
 Route::get('getProducts', [ProductController::class, 'getProducts']);
 Route::post('createProduct', [ProductController::class, 'createProduct']);
@@ -18,3 +19,10 @@ Route::post('createCategory', [CategoryController::class, 'createCategory']);
 Route::get('getCategory/{categoryId}', [CategoryController::class, 'getCategory']);
 Route::put('updateCategory/{categoryId}', [CategoryController::class, 'updateCategory']);
 Route::delete('deleteCategory/{categoryId}', [CategoryController::class, 'deleteCategory']);
+
+
+Route::post('register', [AuthController::class, 'register']);
+
+Route::post('login', [AuthController::class, 'login']);
+
+Route::get('/verify-otp', [AuthController::class, 'verifyOTP'])->name('verify.otp');
